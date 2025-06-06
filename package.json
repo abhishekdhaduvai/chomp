@@ -2,10 +2,23 @@
   "name": "chomp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api/index.ts",
   "scripts": {
+    "dev": "nodemon --files api/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/node": "^5.2.1",
+    "pino": "^9.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
 }
